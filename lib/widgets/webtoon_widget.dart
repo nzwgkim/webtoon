@@ -23,7 +23,9 @@ class Webtoon extends StatelessWidget {
               thumb: thumb,
               id: id,
             ),
-            fullscreenDialog: true,
+
+            //fullscreenDialog의 효과 확인하기
+            // fullscreenDialog: true,
           ),
         );
       },
