@@ -26,6 +26,14 @@ class HomeScreen extends StatelessWidget {
         future: webtoons,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            // 방법 1
+            // return ListView(
+            //   children: [
+            //     for (var webtoon in snapshot.data!) Text(webtoon.title)
+            //   ],
+            // );
+
+            // 방법 2
             // return ListView.builder(
             //   itemBuilder: (context, index) {
             //     print(index);
@@ -36,12 +44,7 @@ class HomeScreen extends StatelessWidget {
             //   itemCount: snapshot.data!.length,
             // );
 
-            // return ListView(
-            //   children: [
-            //     for (var webtoon in snapshot.data!) Text(webtoon.title)
-            //   ],
-            // );
-
+            // 방법3
             return ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: snapshot.data!.length,
