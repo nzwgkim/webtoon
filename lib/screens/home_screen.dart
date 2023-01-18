@@ -45,7 +45,23 @@ class HomeScreen extends StatelessWidget {
             //   itemCount: snapshot.data!.length,
             // );
 
-            // 방법3
+            // 방법3 : ListView.builder에서, builder를 separated로 바꿨다.
+            // return ListView.separated(
+            //   itemBuilder: (context, index) {
+            //     print(index);
+            //     var current = snapshot.data![index];
+            //     return Text(current.title);
+            //     // return Image.network(current.thumb);
+            //   },
+            //   // separatorBuilder: 어떻게 구분을 보여줄 것인지를 정한다. 매우 쉽다.
+            //   separatorBuilder: (context, index) => const SizedBox(
+            //     width: 20,
+            //   ),
+            //   scrollDirection: Axis.horizontal,
+            //   itemCount: snapshot.data!.length,
+            // );
+
+            // 방법4
             return Column(
               children: [
                 const SizedBox(
