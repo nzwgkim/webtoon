@@ -17,6 +17,11 @@ class Episode extends StatelessWidget {
         "https://comic.naver.com/webtoon/detail?titleId=$webtoonId&no=${episode.id}");
   }
 
+  // onButtonTap() async {
+  //   final url = Uri.parse('https://google.com');
+  //   await launchUrl(url);
+  // }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
