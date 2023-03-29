@@ -48,6 +48,22 @@ class Webtoon extends StatelessWidget {
               ),
               child: Image.network(thumb),
             ),
+// Column(
+//   mainAxisSize: MainAxisSize.min,
+//   children: [
+//     ClipRRect(
+//       borderRadius: BorderRadius.circular(20),
+//       child: Image.network(
+//         thumb,
+//         width: 250,
+//         height: 250,
+//         fit: BoxFit.cover,
+//       ),
+//     ),
+//     const SizedBox(height: 8),
+//     const Text('See this usage!')
+//   ],
+// ),
           ),
           const SizedBox(
             height: 10,
