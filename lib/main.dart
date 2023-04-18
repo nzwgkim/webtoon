@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:webtoon/screens/home_screen.dart';
 // import 'package:webtoon/services/api_services.dart';
 
@@ -17,7 +18,7 @@ void main() {
   HttpOverrides.global = MyHttpOverrides();
 
   // ApiService.getTodaysToons();
-  runApp(const App());
+  runApp(const ProviderScope(child: App()));
 }
 
 class App extends StatelessWidget {
