@@ -4,9 +4,9 @@ import 'package:webtoon/services/api_services.dart';
 import 'package:webtoon/widgets/webtoon_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
-  final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
+  // final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,9 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: FutureBuilder(
-        future: webtoons,
+        future:
+            // webtoons,
+            ApiService.getTodaysToons(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             // 방법 1

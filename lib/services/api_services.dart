@@ -38,9 +38,9 @@ class ApiService {
 
     dio.interceptors.add(CustomInterceptor());
     final response = await dio.get('$baseUrl/$today');
-    print(response.data);
-    print(response.statusCode);
-    print(response.data.length);
+    // print(response.data);
+    // print(response.statusCode);
+    // print(response.data.length);
 
     if (response.statusCode == 200) {
       final List<dynamic> json = response.data;
@@ -49,7 +49,7 @@ class ApiService {
         webtoonInstances.add(WebtoonModel.fromJson(ajson));
         // print('add');
       }
-      print(webtoonInstances);
+      // print(webtoonInstances);
       return webtoonInstances;
     }
 
@@ -60,7 +60,8 @@ class ApiService {
     final dio = Dio();
     dio.interceptors.add(CustomInterceptor());
     final response = await dio.get("$baseUrl/$id");
-    print(response.data);
+    // print(response.data);
+
     if (response.statusCode == 200) {
       final json = response.data;
       return WebtoonDetailModel.fromJson(json);
@@ -82,7 +83,7 @@ class ApiService {
     dio.interceptors.add(CustomInterceptor());
 
     final response = await dio.get("$baseUrl/$id/episodes");
-    print(response.data);
+    // print(response.data);
 
     if (response.statusCode == 200) {
       final json = response.data;
